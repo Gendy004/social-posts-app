@@ -1,50 +1,61 @@
-# Welcome to your Expo app 👋
+# Social Posts App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple social mobile application built using React Native and Expo Go.  
+The app displays a list of posts, allows the user to open post details, and shows the comments related to the selected post.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Home screen with a list of posts
+- Post card showing:
+  - User name
+  - User avatar
+  - Post title
+  - Post content
+- Post details screen showing:
+  - User name
+  - User avatar
+  - Post title
+  - Post content
+  - List of comments
+- Comment card showing:
+  - User name
+  - User avatar
+  - Comment content
+- Loading and error states
+- Pull-to-refresh on the home screen
 
-   ```bash
-   npm install
-   ```
+## Technologies Used
 
-2. Start the app
+- React Native
+- Expo Go
+- TypeScript
+- Expo Router
+- GoREST API
 
-   ```bash
-   npx expo start
-   ```
+## API Used
 
-In the output, you'll find options to open the app in a
+The app uses GoREST public API:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Posts: `https://gorest.co.in/public/v2/posts`
+- Users: `https://gorest.co.in/public/v2/users/{user_id}`
+- Comments: `https://gorest.co.in/public/v2/posts/{post_id}/comments`
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Since the API does not provide real avatar images, the app uses generated initials avatars based on the user names.
 
-## Get a fresh project
+## Project Structure
 
-When you're ready, run:
+```txt
+app/
+  _layout.tsx
+  index.tsx
+  post/
+    [id].tsx
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+src/
+  components/
+    Avatar.tsx
+    PostCard.tsx
+    CommentCard.tsx
+  services/
+    api.ts
+  types.ts
