@@ -59,3 +59,13 @@ src/
   services/
     api.ts
   types.ts
+
+## Screenshots
+
+### Home Screen
+
+![Home Screen](./home.png)
+
+### Post Details Screen
+
+![Post Details Screen](./details.png)
