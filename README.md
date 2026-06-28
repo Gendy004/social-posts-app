@@ -64,8 +64,7 @@ src/
 
 ### Home Screen
 
-![Home Screen](./home.png)
-
+![Home Screen](./assets/home.png)
 ### Post Details Screen
 
-![Post Details Screen](./details.png)
+![Post Details Screen](./assets/details.png)
