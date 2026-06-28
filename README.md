@@ -68,3 +68,13 @@ src/
 ### Post Details Screen
 
 ![Post Details Screen](./assets/details.png)
+
+
+  ## Screenshots
+
+### Home Screen
+
+![Home Screen](./assets/home.png)
+### Post Details Screen
+
+![Post Details Screen](./assets/details.png)
